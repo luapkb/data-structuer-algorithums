@@ -9,8 +9,10 @@ Write a function that appends ' The end.' to a string, and returns the modified 
 ------------------------------------------------------------------------------------------------ */
 
 const appendTheEnd = (str) => {
-  let clsStr = ' The end') => str.concat(clsStr)
-};
+  let clsStr = ' The end';
+  let modStr = str.concat(clsStr);
+  return modStr
+  };
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 2
