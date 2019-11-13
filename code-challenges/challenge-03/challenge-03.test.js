@@ -7,9 +7,10 @@ Write a function named sortBackwards that takes in an array of numbers and retur
 ------------------------------------------------------------------------------------------------ */
 
 const sortBackwards = (arr) => {
-  arr.sort(function(a, b) {
-    return a - b;
+  arr.sort((A, B) => {
+    return A - B;
   });
+  return arr;
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -22,7 +23,17 @@ In this alphabetization, capital letters come before lower case letters.
 For example, ['Alphabet', 'Zebra', 'alphabet', 'carrot'] is correctly sorted.
 ------------------------------------------------------------------------------------------------ */
 
-const alphabetize = (arr) => arr.sort();
+const alphabetize = (arr) =>{
+  arr.sort((word1, word2) => {
+    if (word1 > word2){
+      return 1;
+    }else{
+      return -1;
+    }
+  }
+  );
+  return arr;
+};
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 3
@@ -31,10 +42,14 @@ Write a function named sortByLength that takes in an array of strings and return
 ------------------------------------------------------------------------------------------------ */
 
 const sortByLength = (arr) => {
-  arr.sort(function(a,b){
-    return a.length - b.length; //ASC, For Descending order use: b - a
+  arr.sort((one, two) => {
+    if(one.length > two.length){
+      return 1;
+    }else{
+      return 1;
+    } //ASC, For Descending order use: b - a
   });
-  console.log(arr);
+  return arr;
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -46,7 +61,14 @@ For example, ['Alphabet', 'alphabet', 'carrot', 'Zebra'] is correctly sorted, an
 ------------------------------------------------------------------------------------------------ */
 
 const alphabetizeBetter = (arr) => {
-  // Solution code here...
+  arr.sort((foo, faa) =>{
+    if(foo.toLowerCase() > faa.toLowerCase()){
+      return 1;
+    }else{
+      return -1;
+    }
+  });
+  return arr;
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -63,7 +85,14 @@ Here is an example of the input:
 ------------------------------------------------------------------------------------------------ */
 
 const sortByPrice = (arr) => {
-  // Solution code here...
+  arr.sort((foo, faa) => {
+    if(foo.price > faa.price){
+      return 1;
+    }else{
+      return -1;
+    }
+  });
+  return arr; // Solution code here...
 };
 
 /* ------------------------------------------------------------------------------------------------
