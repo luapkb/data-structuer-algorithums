@@ -4,7 +4,7 @@
 CHALLENGE 1
 
 Write a function named isNum that takes in a string or number of any length. This function should use a regular expression pattern to return true if the input contains a number, and false if the input does not contain a number.
-
+a function takes in a string use regex to return true if the string has a number
 For example:
 12345 returns true
 '12345' returns true
@@ -13,7 +13,8 @@ For example:
 ------------------------------------------------------------------------------------------------ */
 
 const isNum = (input) => {
-  // Solution code here...
+  const regex = /\d/gm;
+  return regex.test(imput);
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -25,7 +26,13 @@ Return an array containing all the matches.
 ------------------------------------------------------------------------------------------------ */
 
 const isCapitalized = (str) => {
-  // Solution code here...
+  const capReg = /[A-Z][a-z]*/g;
+  let caps = str.match(capReg);
+  if(caps){
+    return caps;
+  }else{
+    return [];
+  }
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -35,7 +42,14 @@ Write a function named citiesAtoJ that takes in an array of city names and uses 
 ------------------------------------------------------------------------------------------------ */
 
 const citiesAtoJ = (arr) => {
-  // Solution code here...
+  const regex = /^[A-J]/;
+  let timmy = [];
+
+  arr.forEach((AtoJ) => {
+    if(regex){
+      timmy.push(regex.test(input));
+    }
+  });
 };
 
 /* ------------------------------------------------------------------------------------------------
