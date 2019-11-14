@@ -29,7 +29,7 @@ const isCapitalized = (str) => {
   const capReg = /[A-Z][a-z]*/g;
   let caps = str.match(capReg);
   if(caps){
-    return caps
+    return caps;
   }else{
     return [];
   }
@@ -42,7 +42,14 @@ Write a function named citiesAtoJ that takes in an array of city names and uses 
 ------------------------------------------------------------------------------------------------ */
 
 const citiesAtoJ = (arr) => {
-  // Solution code here...
+  const regex = /^[A-J]/;
+  let timmy = [];
+
+  arr.forEach((AtoJ) => {
+    if(regex){
+      timmy.push(regex.test(input));
+    }
+  });
 };
 
 /* ------------------------------------------------------------------------------------------------
