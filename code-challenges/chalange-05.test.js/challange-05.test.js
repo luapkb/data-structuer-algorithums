@@ -81,10 +81,19 @@ const gruffaloCrumble = {
 
 const listFoods = (recipe) => {
   let result = [];
-  
-  return result;
-};
+  let timmy = recipe.ingredients;
+  // timmy.slice(timmy.indexOf())
+  timmy.forEach(foods => {
 
+    let firstSlice = foods.slice(foods( -8));
+    let seccondSlice = firstSlice.(food.indexOf(' ') + 1);
+
+    result.push(seccondSlice);
+
+  })
+
+  return result;
+}
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 4
 
@@ -220,14 +229,14 @@ xdescribe('Testing challenge 2', () => {
   });
 });
 
-xdescribe('Testing challenge 3', () => {
+describe('Testing challenge 3', () => {
   test('It should return a list of foods', () => {
     expect(listFoods(gruffaloCrumble)).toStrictEqual(['Gruffalo', 'oats', 'brown sugar', 'flour', 'pure maple syrup', 'chopped nuts', 'baking soda', 'baking powder', 'cinnamon', 'melted butter', 'fresh water']);
     expect(listFoods(gruffaloCrumble).length).toStrictEqual(11);
   });
 });
 
-xdescribe('Testing challenge 4', () => {
+describe('Testing challenge 4', () => {
   test('It should return a list of foods', () => {
     expect(splitFoods(gruffaloCrumble)).toStrictEqual(['Gruffalo', 'oats', 'brown sugar', 'flour', 'pure maple syrup', 'chopped nuts', 'baking soda', 'baking powder', 'cinnamon', 'melted butter', 'fresh water']);
   });
