@@ -13,10 +13,11 @@ const courseInfo = { name: 'Code 301', duration: { dayTrack: '4 weeks', eveningT
 };
 
 const getCourseKeys = (obj) => {
-  obj = Object.keys(courseInfo);
+  let newObj = Object.keys(obj);
+  
   console.log(courseInfo);
-  console.log(obj);
-  return obj;
+  console.log(newobj);
+  return newobj;
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -73,9 +74,8 @@ let characters = [
 
 const getHouses = (arr) => {
   let houses = [];
-  for (let house in characters) {
-    string1 += characters[house];
-    houses.push(string1);
+  arr.forEach(person => {
+    houses.push(person.house);
   });
   return houses;
 };
@@ -93,8 +93,18 @@ hasChildrenValues(characters, 'Sansa') will return false
 ------------------------------------------------------------------------------------------------ */
 
 const hasChildrenValues = (arr, character) => {
-  // Solution code here...
-
+  let hasKid;
+  arr.forEach(char => {
+    if(char.name === character){
+      let hasKid = object.values(char.children);
+      if(hasKid.length !==0) {
+        hasKid = true;
+      }else{
+        hasKid =false;
+      }
+    }
+  });
+return hasKid;
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -106,7 +116,18 @@ The input and output of this function are the same as the input and output from 
 ------------------------------------------------------------------------------------------------ */
 
 const hasChildrenEntries = (arr, character) => {
-  // Solution code here...
+  let hasKid;
+  arr.forEach(char => {
+    if(char.name === character){
+      let hasKid = object.entries(char.children);
+      if(hasKid.length !==0) {
+        hasKid = true;
+      }else{
+        hasKid =false;
+      }
+    }
+  });
+return hasKid;
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -116,7 +137,8 @@ Write a function named totalCharacters that takes in an array and returns the nu
 ------------------------------------------------------------------------------------------------ */
 
 const totalCharacters = (arr) => {
-  // Solution code here...
+  const results = [];
+  
 };
 
 /* ------------------------------------------------------------------------------------------------
