@@ -9,7 +9,7 @@ For example, oddValues([1,2,3]) returns [1,3].
 ------------------------------------------------------------------------------------------------ */
 
 const oddValues = (arr) => {
-  // Solution code here...
+  return arr.filter(value => !(value % 2 === 0));
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -24,7 +24,8 @@ For example, filterStringsWithVowels('gregor','hound','xyz') returns ['gregor', 
 
 
 const filterStringsWithVowels = (arr) => {
-  // Solution code here...
+  let regex = /aeiou/i;
+  return arr.filter(str => regex.test(str));
 };
 
 
@@ -37,8 +38,7 @@ For example, notInFirstArray([1,2,3], [1,2,3,4]) returns [4].
 ------------------------------------------------------------------------------------------------ */
 
 const notInFirstArray = (forbiddenValues, arr) => {
-  // Solution code here...
-};
+  return arr.filter(value => !forbiddenValues.includes(value));
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 4
@@ -145,10 +145,11 @@ const characters = [
 ];
 
 const getCharactersWithoutChildren = (arr) => {
-  // Solution code here...
+  let timmy = arr.filter(char => char.children === undefined);
+  return timmy;
 };
-
-/* ------------------------------------------------------------------------------------------------
+/*
+*------------------------------------------------------------------------------------------------
 CHALLENGE 7 - Stretch Goal
 
 Write a function named evenOddNumericValues that, given an array as input, uses filter to remove any non-numeric values, then uses map to generate a new array containing the string 'even' or 'odd', depending on the original value.
